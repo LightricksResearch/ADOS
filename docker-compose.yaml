@@ -1,15 +1,15 @@
 version: '3.8'
 services:
-  lightricks-ados:
+  lightricks-finetune:
     image: aeorlov/ados-workspace-cuda13.0:v.0.0.5
     ports:
-      - "8889:8889"
-    # volumes:
-    #   - checkpoints:/mnt/data
-    # environment:
-    #   - JUPYTER_TOKEN=lightricks
-    # command: >
-    #   /bin/bash -c "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/app"
+      - "8888:8888"
+    volumes:
+      - checkpoints:/mnt/data
+    environment:
+      - JUPYTER_TOKEN=lightricks
+    command: >
+      /bin/bash -c "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/mnt/data"
     deploy:
       resources:
         reservations:
@@ -18,5 +18,5 @@ services:
               count: all
               capabilities: [ gpu ]
 
-# volumes:
-#   checkpoints:
+volumes:
+  checkpoints:
