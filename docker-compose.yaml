@@ -1,0 +1,22 @@
+version: '3.8'
+services:
+  lightricks-ados:
+    image: us-docker.pkg.dev/ltx-research/docker/ados-workspace-cuda13.0:v0.0.2
+    ports:
+      - "8888:8888"
+    # volumes:
+    #   - checkpoints:/mnt/data
+    # environment:
+    #   - JUPYTER_TOKEN=lightricks
+    # command: >
+    #   /bin/bash -c "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/app"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [ gpu ]
+
+# volumes:
+#   checkpoints:
