@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   lightricks-ados:
-    image: us-docker.pkg.dev/ltx-research/docker/ados-workspace-cuda13.0:v0.0.2
+    image: aeorlov/ados-workspace-cuda13.0:v.0.0.2
     ports:
       - "8888:8888"
     # volumes:
