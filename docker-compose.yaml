@@ -3,7 +3,7 @@ services:
   lightricks-ados:
     image: aeorlov/ados-workspace-cuda13.0:v.0.0.5
     ports:
-      - "8888:8888"
+      - "8889:8889"
     # volumes:
     #   - checkpoints:/mnt/data
     # environment:
