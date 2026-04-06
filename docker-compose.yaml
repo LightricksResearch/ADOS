@@ -1,15 +1,13 @@
 version: '3.8'
 services:
   lightricks-finetune:
-    image: aeorlov/ados-workspace-cuda13.0:v.0.0.5
+    image: aeorlov/ados-workspace-cuda13.0:v.0.0.6
+    user: root
     ports:
-      - "8888:8888"
+      - "8889:8888"
     volumes:
       - checkpoints:/mnt/data
-    environment:
-      - JUPYTER_TOKEN=lightricks
-    command: >
-      /bin/bash -c "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --notebook-dir=/mnt/data"
+    command: [ "jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--notebook-dir=/mnt/data", "--NotebookApp.token=", "--NotebookApp.password=" ]
     deploy:
       resources:
         reservations:
