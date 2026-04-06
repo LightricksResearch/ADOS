@@ -1,13 +1,13 @@
 version: '3.8'
 services:
   lightricks-finetune:
-    image: aeorlov/ados-workspace-cuda13.0:v.0.0.6
+    image: aeorlov/ados-workspace-cuda13.0:v.0.0.8
     user: root
     ports:
       - "8889:8888"
     volumes:
       - checkpoints:/mnt/data
-    command: [ "/opt/pyenv/shims/jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--notebook-dir=/mnt/data", "--NotebookApp.token=", "--NotebookApp.password=" ]
+    # command: [ "/opt/pyenv/shims/jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--notebook-dir=/mnt/data", "--NotebookApp.token=", "--NotebookApp.password=" ]
     deploy:
       resources:
         reservations:
