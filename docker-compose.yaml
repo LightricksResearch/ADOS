@@ -1,8 +1,10 @@
 version: '3.8'
 services:
   lightricks-finetune:
-    image: aeorlov/ados-workspace-cuda13.0:v.0.0.13
-    # user: root
+    image: aeorlov/ados-workspace-cuda13.0:v.0.0.21
+    environment:
+      - GCS_BUCKET=ltx-ados-2026
+      - GCS_MOUNT_PATH=/mnt/gcs
     ports:
       - "8889:8888"
       - "2222:22"
@@ -10,7 +12,11 @@ services:
       - "8188:8188"
     volumes:
       - checkpoints:/mnt/data
-    # command: [ "/opt/pyenv/shims/jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--notebook-dir=/mnt/data", "--NotebookApp.token=", "--NotebookApp.password=" ]
+    cap_add:
+      - SYS_ADMIN
+    privileged: true
+    devices:
+      - /dev/fuse
     deploy:
       resources:
         reservations:
