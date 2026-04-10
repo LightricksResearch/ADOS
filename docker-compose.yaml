@@ -12,11 +12,10 @@ services:
       - "8188:8188"
     volumes:
       - checkpoints:/mnt/data
-    # cap_add:
-    #   - SYS_ADMIN
-    # privileged: true
-    # devices:
-    #   - /dev/fuse
+    cap_add:
+      - SYS_ADMIN
+    devices:
+      - /dev/fuse
     deploy:
       resources:
         reservations:
