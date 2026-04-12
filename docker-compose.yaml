@@ -12,6 +12,7 @@ services:
       - "8188:8188"
     volumes:
       - checkpoints:/mnt/data
+    privileged: true
     cap_add:
       - SYS_ADMIN
     devices:
