@@ -10,6 +10,10 @@ services:
       - "8889:8888"
       - "7681:7681"
       - "8188:8188"
+    cap_add:
+      - SYS_ADMIN
+    volumes:
+      - checkpoints:/mnt/data
     privileged: true
     cap_add:
       - SYS_ADMIN
@@ -22,3 +26,6 @@ services:
             - driver: nvidia
               count: all
               capabilities: [ gpu ]
+
+volumes:
+  checkpoints:
