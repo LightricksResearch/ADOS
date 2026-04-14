@@ -4,7 +4,7 @@ services:
     image: lightricks/ados-workspace:cuda13.0-v0.0.23
     environment:
       - GCS_BUCKET=ltx-ados-2026
-      - MODELS_PATH=/mnt/gcs
+      - MODELS_PATH=/models
       - GCS_MOUNT_PATH=/mnt/gcs
     ports:
       - "8889:8888"
