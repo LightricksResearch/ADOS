@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   lightricks-finetune:
-    image: lightricks/ados-workspace:cuda13.0-v0.0.34
+    image: lightricks/ados-workspace:cuda13.0-v0.0.35
     environment:
       - GCS_BUCKET=ltx-ados-2026
       - MODELS_PATH=/models
