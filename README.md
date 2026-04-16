@@ -1,4 +1,4 @@
-# ADOS Instance — How To
+# ADOS
 
 Quick reference for connecting to and using a brev.nvidia.com GPU instance.
 
