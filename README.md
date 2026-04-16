@@ -54,7 +54,7 @@ https://jupyter0-<instance-id>.brevlab.com
 
 ## GCS Bucket
 
-The bucket is auto-mounted at `/mnt/gcs` on container startup (requires `GCS_BUCKET` env var to be set).
+The bucket is auto-mounted at `/mnt/gcs` on container startup
 
 To sync models manually:
 
