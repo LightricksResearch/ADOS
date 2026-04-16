@@ -2,20 +2,6 @@
 
 Quick reference for connecting to and using a brev.nvidia.com GPU instance.
 
----
-
-## Access
-
-### Web Terminal (ttyd)
-
-Port: `7681`
-
-```
-https://web-ssh0-<instance-id>.brevlab.com
-```
-
----
-
 ## Key Paths
 
 | Path | Description |
@@ -27,6 +13,16 @@ https://web-ssh0-<instance-id>.brevlab.com
 | `/scripts/sync_models.sh` | Manual model sync script |
 
 ---
+
+## Access
+
+### Web Terminal (ttyd)
+
+Port: `7681`
+
+```
+https://web-ssh0-<instance-id>.brevlab.com
+```
 
 ## ComfyUI
 
@@ -43,8 +39,6 @@ cd /ComfyUI
 source .venv/bin/activate
 python main.py --port 8188 --disable-cuda-malloc --listen 0.0.0.0
 ```
-
----
 
 ## JupyterLab
 
