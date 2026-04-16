@@ -16,6 +16,8 @@ Quick reference for connecting to and using a brev.nvidia.com GPU instance.
 
 ## Access
 
+![Brev access panel](img/brev_access.png)
+
 ### Web Terminal (ttyd)
 
 Port: `7681`
