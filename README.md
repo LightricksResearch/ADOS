@@ -46,11 +46,19 @@ python main.py --port 8188 --disable-cuda-malloc --listen 0.0.0.0
 
 Use for uploading/downloading files or running notebooks.
 
-Port: `8888`
+Port: `8889`
 
 ```
 https://jupyter0-<instance-id>.brevlab.com
 ```
+
+**Upload:**
+
+![JupyterLab upload](img/jupiter_upload.png)
+
+**Download:**
+
+![JupyterLab download](img/jupiter_download.png)
 
 ---
 
