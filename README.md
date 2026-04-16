@@ -14,12 +14,6 @@ Port: `7681`
 https://web-ssh0-<instance-id>.brevlab.com
 ```
 
-### SSH
-
-```bash
-ssh user@<instance-ip>
-```
-
 ---
 
 ## Key Paths
