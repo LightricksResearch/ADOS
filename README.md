@@ -24,7 +24,7 @@ Port: `7681`
 https://web-ssh0-<instance-id>.brevlab.com
 ```
 
-## ComfyUI
+### ComfyUI
 
 Port: `8188`
 
@@ -40,7 +40,7 @@ source .venv/bin/activate
 python main.py --port 8188 --disable-cuda-malloc --listen 0.0.0.0
 ```
 
-## JupyterLab
+### JupyterLab
 
 Use for uploading/downloading files or running notebooks.
 
