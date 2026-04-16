@@ -32,7 +32,7 @@ Port: `8188`
 https://comfyui0-<instance-id>.brevlab.com
 ```
 
-To start manually:
+To start:
 
 ```bash
 cd /ComfyUI
